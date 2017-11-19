@@ -1,0 +1,5 @@
+- brak jednoznacznie określonego interfejsu komponentu
+- propsy i nazwy zdarzeń są stringami! i spinają się z this! wtf?!
+- brak odporności na refaktoring
+- czy da się skoczyć do metody v-on? wsparcie dla edytora..
+- IoC?
