@@ -2,7 +2,7 @@
 <div>
     <h2>{{ Question }} </h2>
     <ul>
-        <li v-for="(item, index) in Answers" v-on:click="Next(index)">{{ item }}</li>
+        <li class="que" v-for="(item, index) in Answers" v-on:click="Next(index)">{{ item }}</li>
     </ul>
     <h1>{{ msg }}</h1>
 </div>
@@ -15,7 +15,6 @@ export default
   created()
   {
       this.questions = this.$root.quizzes[0].questions;
-      console.log(this.questions);
   },
   data() 
   {
@@ -36,7 +35,7 @@ export default
         }
         else
         {
-            this.msg = "The eend.";
+            this.msg = "The end.";
         }
         
         this.$emit('IndexChange', { index: this.index, max: this.questions.length });
@@ -56,3 +55,14 @@ export default
 
 }
 </script>
+
+<style>
+.que 
+{
+    margin: 3px;
+    background: #abc;
+    border: 1px solid red;
+    padding: 13px 30px;
+
+}
+</style>

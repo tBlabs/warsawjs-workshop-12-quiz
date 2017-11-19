@@ -1,34 +1,19 @@
 <template>
   <div id="app">
-    <h2>Quiz</h2>
-    <Quiz v-on:IndexChange="BindQuizIndexChangeWithQuestionList"/>
-    <QuestionsList v-bind:value="questionListValue"/>
+    <h2>{{ header }}</h2>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Quiz from './components/Quiz'
-import QuestionsList from './components/QuestionsList'
-
 export default {
   name: 'app',
   data () {
     return {
-      questionListValue: {}
+      questionListValue: {},
+      header: "Quiz"
     }
   },
-  components: {
-    Quiz,
-    QuestionsList
-  },
-  methods:
-  {
-    BindQuizIndexChangeWithQuestionList(x)
-    {
-      console.log('aaaa', x);
-      this.questionListValue = x;
-    }
-  }
 }
 </script>
 
